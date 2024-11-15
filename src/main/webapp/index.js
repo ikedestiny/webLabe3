@@ -1,19 +1,10 @@
 document.addEventListener("DOMContentLoaded",function () {
-    const currentX = document.querySelector("#currentX");
-
-    let xButtons = document.getElementsByClassName("xb");
-
-    function setX(value){
-        currentX.innerHTML = value;
-        console.log(currentX)
-    }
+  //TODO set x y when graph is clicked and trigger the click method of form submit button
 
 
-    for(let x in xButtons){
-        x.addEventListener("click",($event)=>{
-            $event.preventDefault();
-            setX(x.value)
-        })
-    }
+
+
+
+
 
 })

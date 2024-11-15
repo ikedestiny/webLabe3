@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>ЛР №3</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="index.css" type="text/css"/>
+    <script src="index.js" type="text/javascript" ></script>
+
+
+</h:head>
+<h:body>
+    <div id="header">
+        <div class="introDiv">
+            <h1>Ike Holy Destiny </h1>
+            <h1>P3230</h1>
+            <h1>Variant 374215</h1>
+        </div>
+        <div>
+            <h1 id="page-title">
+                Web Programming Lab 3
+            </h1>
+        </div>
+
+
+        <h:form>
+            <h:commandButton value="HOME" action="index"/>
+        </h:form>
+    </div>
+
+    <div class="main">
+
+        <div class=" plane">
+
+            <svg class="svg-graph" height="560" width="560">
+                <!-- x-axis -->
+                <line class="axis" stroke="black" x1="4" x2="556" y1="280" y2="280"></line>
+                <line class="arrowHead" stroke="black" x1="544" x2="556" y1="272" y2="280"></line>
+                <line class="arrowHead" stroke="black" x1="544" x2="556" y1="288" y2="280"></line>
+
+                <!-- y-axis -->
+                <line class="axis" stroke="black" x1="280" x2="280" y1="4" y2="556"></line>
+                <line class="arrowHead" stroke="black" x1="280" x2="260" y1="4" y2="24"></line>
+                <line class="arrowHead" stroke="black" x1="280" x2="300" y1="4" y2="24"></line>
+
+                <!-- coordinate lines for x-axis -->
+                <line class="Xcoor" stroke="black" x1="84" x2="84" y1="276" y2="284"></line>  <!-- -5 -->
+                <line class="Xcoor" stroke="black" x1="182" x2="182" y1="276" y2="284"></line>  <!-- -2.5 -->
+                <line class="Xcoor" stroke="black" x1="378" x2="378" y1="276" y2="284"></line> <!-- 2.5 -->
+                <line class="Xcoor" stroke="black" x1="476" x2="476" y1="276" y2="284"></line> <!-- 5 -->
+
+                <!-- coordinate lines for y-axis -->
+                <line class="Ycoor" stroke="black" x1="276" x2="284" y1="84" y2="84"></line>  <!-- 5 -->
+                <line class="Ycoor" stroke="black" x1="276" x2="284" y1="182" y2="182"></line>  <!-- 2.5 -->
+                <line class="Ycoor" stroke="black" x1="276" x2="284" y1="378" y2="378"></line> <!-- -2.5 -->
+                <line class="Ycoor" stroke="black" x1="276" x2="284" y1="476" y2="476"></line> <!-- -5 -->
+
+                <!-- x-axis labels -->
+                <text class="xCoorText" x="552" y="272">x</text>
+                <text class="xCoorText" x="470" y="272">3</text>
+                <text class="xCoorText" x="366" y="272">1.5</text>
+                <text class="xCoorText" x="170" y="272">-1.5</text>
+                <text class="xCoorText" x="72" y="272">-3</text>
+
+                <!-- y-axis labels -->
+                <text class="yCoorText" x="296" y="88">3</text>
+                <text class="yCoorText" x="296" y="186">1.5</text>
+                <text class="yCoorText" x="296" y="382">-1.5</text>
+                <text class="yCoorText" x="296" y="480">-3</text>
+                <text class="yCoorText" x="296" y="20">y</text>
+
+                <!-- Rectangle in the 2nd quadrant -->
+                <polygon id="rectangle" fill="blue" fill-opacity="0.2" points="84,84 280,84 280,280 84,280"></polygon>
+
+                <!-- Triangle in the 3rd quadrant -->
+                <polygon id="triangle" fill="blue" fill-opacity="0.2" points="280,280 280,476 182,280"></polygon>
+
+                <!-- Curve in the 4th quadrant -->
+                <path id="curve"
+                      d="
+            M 280 476
+            S 476 476 476 280
+            L 280 280 L 280 476
+          "
+                      fill="blue"
+                      fill-opacity="0.2"
+                />
+            </svg>
+
+
+
+        </div>
+        <div>
+            <h:form id="main-form">
+                <div class="x-values">
+                    <div>
+                        <h:outputLabel for="currentX" value=" SET X"/><br/>
+                        <h:inputText class="x"  id="currentX" value="#{results.x}" readonly="true" ></h:inputText>
+                    </div>
+                    <div>
+                        <h:commandButton value="-2" class="x xb"  action="#{results.setX(-2)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="-1.5" class="x xb"  action="#{results.setX(-1.5)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="-1" class="x xb" action="#{results.setX(-1)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="-0.5" class="x xb" action="#{results.setX(-0.5)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="0" class="x xb" action="#{results.setX(0)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="0.5" class="x xb" action="#{results.setX(0.5)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="1" class="x xb" action="#{results.setX(1)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="1.5" class="x xb" action="#{results.setX(1.5)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                        <h:commandButton value="2" class="x xb" action="#{results.setX(2)}">
+                            <f:ajax execute="@this" render="main-form" />
+                        </h:commandButton>
+                    </div>
+
+                </div>
+
+                <div class="setY">
+                    <h:outputLabel for="y" value="SET Y"/><br/>
+                    <h:inputText class="x"  id="y" value="#{results.y}" label="YValue">
+                        <f:validateDoubleRange minimum="-5" maximum="3"/>
+                    </h:inputText>
+                </div>
+
+                <div class="setR">
+                    <h:outputLabel for="r" value="select R"/><br/>
+                    <h:selectOneMenu id="r" value="#{results.r}" required="true">
+                        <f:selectItem itemLabel="1" itemValue="1"/>
+                        <f:selectItem itemLabel="1.5" itemValue="1.5"/>
+                        <f:selectItem itemLabel="2" itemValue="2"/>
+                        <f:selectItem itemLabel="2.5" itemValue="2.5"/>
+                        <f:selectItem itemLabel="3" itemValue="3"/>
+                    </h:selectOneMenu>
+                </div>
+
+                <h:commandButton class="submitButton" id="submit" value="checkResult" action="#{results.saveResult()}">
+                    <f:ajax execute="@form" render="result-form plate-with-dots"/>
+                </h:commandButton>
+            </h:form>
+        </div>
+
+    </div>
+
+
+    <h:dataTable id="result-form"
+                 value="#{results.getAll()}"
+                 var="all"
+    >
+        <h:column>
+            <f:facet name="header">X</f:facet>
+            #{all.x}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Y</f:facet>
+            #{all.y}
+        </h:column> <h:column>
+        <f:facet name="header">R</f:facet>
+        #{all.r}
+    </h:column>
+        <h:column>
+            <f:facet name="header">TIME SENT</f:facet>
+            #{all.recieved}
+        </h:column>
+        <h:column>
+            <f:facet name="header">EXEC TIME</f:facet>
+            #{all.executionTime}
+        </h:column>
+        <h:column>
+            <f:facet name="header">inAREA?</f:facet>
+            #{all.inArea}
+        </h:column>
+
+    </h:dataTable>
+
+</h:body>
+</html>

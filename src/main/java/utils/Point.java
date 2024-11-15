@@ -1,8 +1,8 @@
-package org.example.model;
+package utils;
 
-public record Point(float x, float y) {
+public record Point(double x, double y) {
 
-    public float  radiusToCenter(){
-        return (float) Math.sqrt(Math.pow(x(),2)+Math.pow(y(),2));
+    public double  radiusToCenter(){
+        return  Math.sqrt(Math.pow(x(),2)+Math.pow(y(),2));
     }
 }

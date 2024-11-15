@@ -68,7 +68,7 @@ body{
       display: flex;
       flex-direction:column;
       justify-content:space-between;
-      align-items:flex-end;
+      align-items:flex-start;
 
 
 
@@ -113,6 +113,8 @@ label{
 table{
     border: 3px solid;
     background-color: #696767;
+    width:100vw;
+
 
 & th{
       border: 5px solid;
@@ -125,7 +127,6 @@ table{
       font-size:x-large;
       padding-left: 5px;
       text-align:center;
-      border: 0.1px solid black;
   }
 }
 
@@ -156,7 +157,15 @@ table{
   }
 }
 
-.setR{
 
-
+.submitButton{
+    color:white;
+    border:1px solid blue;
+    background-color: #757576;
+    margin: 5px;
+    padding:5px;
+    font-size:large;
+    border-radius:15px;
+    text-align:center;
 }
+

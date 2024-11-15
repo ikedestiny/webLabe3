@@ -25,9 +25,9 @@
 
 
     <managed-bean>
-        <managed-bean-name>controllerBean</managed-bean-name>
-        <managed-bean-class>ru.mikhail.lab3.beans.ControllerBean</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
+        <managed-bean-name>results</managed-bean-name>
+        <managed-bean-class>src.main.java.controller.ResultsController</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
     </managed-bean>
 
 
