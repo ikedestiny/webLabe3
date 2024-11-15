@@ -1,0 +1,162 @@
+body{
+    background-color:black;
+    color:white;
+    display:flex;
+    flex-direction:column
+}
+#header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:-20px;
+    padding:2vw;
+    position:sticky;
+    top:0;
+    background-color: #4a4949;
+    border-bottom: 2px double #555151;
+
+&  .introDiv{
+&   h1{
+        font-size:x-large;
+
+    }
+}
+
+#page-title{
+    font-size:-webkit-xxx-large;
+}
+
+& input{
+      color:#fbfbfb;
+      border: 2px solid blue;
+      border-radius:5px;
+      background-color: black;
+      font-size: x-large;
+  }
+
+}
+
+.main{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+
+
+
+
+
+
+& form{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-around;
+      height:auto;
+      align-items:flex-end;
+
+
+
+> div{
+    margin-bottom:3vw;
+    width:20vw;
+
+
+
+}
+
+
+& .x-values{
+      display: flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:flex-end;
+
+
+
+&  div{
+
+.x,input{
+    color:#dddde9;
+    border:1px solid blue;
+    background-color: #000000;
+    margin: 5px;
+    padding:5px;
+    font-size:large;
+    border-radius:15px;
+    text-align:center;
+}
+
+.xb{
+    background-color: #696767;
+    width:5vw;
+}
+}
+
+
+
+}
+
+
+
+
+}
+}
+
+label{
+    margin-top:6vw;
+}
+
+
+
+
+
+
+table{
+    border: 3px solid;
+    background-color: #696767;
+
+& th{
+      border: 5px solid;
+      color:black;
+      font-size:-webkit-xxx-large;
+  }
+
+& td{
+      color:#ffffff;
+      font-size:x-large;
+      padding-left: 5px;
+      text-align:center;
+      border: 0.1px solid black;
+  }
+}
+
+.plane{
+    margin-top: 23vh;
+    margin-right: 3vw;
+    height: auto;
+    margin-bottom:3vw;
+
+.svg-graph{
+    background-color: #757576;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 400;}
+}
+
+
+.setY{
+& input{
+      color:#dddde9;
+      border:1px solid blue;
+      background-color: black;
+      margin: 5px;
+      padding:5px;
+      font-size:large;
+      border-radius:15px;
+      text-align:center;
+  }
+}
+
+.setR{
+
+
+}
