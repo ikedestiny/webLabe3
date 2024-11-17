@@ -32,11 +32,11 @@
         </h:form>
     </div>
 
-    <div class="main">
+    <div class="main" id="MAIN">
 
         <div class=" plane">
 
-            <svg class="svg-graph" height="560" width="560">
+            <svg id="svgGraph" class="svg-graph" height="560" width="560">
                 <!-- x-axis -->
                 <line class="axis" stroke="black" x1="4" x2="556" y1="280" y2="280"></line>
                 <line class="arrowHead" stroke="black" x1="544" x2="556" y1="272" y2="280"></line>
@@ -89,17 +89,19 @@
                       fill="blue"
                       fill-opacity="0.2"
                 />
+
+                <f:ajax event="click" execute="@this" render="svgGraph" onevent="svgClick(event)" action="#{results.addClick(2,3)}"/>
             </svg>
 
-
-
-        </div>
+         </div>
         <div>
-            <h:form id="main-form">
+            <h:form id="main-form" class="mainForm">
                 <div class="x-values">
                     <div>
                         <h:outputLabel for="currentX" value=" SET X"/><br/>
-                        <h:inputText class="x"  id="currentX" value="#{results.x}" readonly="true" ></h:inputText>
+                        <h:inputText class="x xbox"  id="currentX" value="#{results.x}" readonly="true" action="results.setX(3)">
+                            <f:ajax event="change" execute="@this" render="currentX"/>
+                        </h:inputText>
                     </div>
                     <div>
                         <h:commandButton value="-2" class="x xb"  action="#{results.setX(-2)}">
@@ -159,6 +161,11 @@
 
     </div>
 
+        <h:form id="clickForm" styleClass="invisible">
+            <input type="text" id="clickedX" name="clickedX"/>
+            <input type="text" id="clickedY" name="clickedY"/>
+            <h:commandButton action="#{results.UpdateParamsXY}" id="submitClick" value="clicked from js"/>
+        </h:form>
 
     <h:dataTable id="result-form"
                  value="#{results.getAll()}"

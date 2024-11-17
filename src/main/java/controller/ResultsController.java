@@ -2,9 +2,12 @@ package controller;
 
 import database.ResultService;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.Data;
 import model.Result;
 import utils.ResultChecker;
@@ -27,23 +30,35 @@ public class ResultsController {
     @Inject
     private ResultService service;
 
+    private ArrayList<Result> clickedResult = new ArrayList<>();
+
     public void setX(double x) {
         this.x = x;
     }
 
 
 
-    private ArrayList<Result> clickedResult = new ArrayList<>();
+
+
+
 
 
     public List<Result> getAll() throws SQLException {
         return  service.getAll();
     }
 
-    public void addClick() throws SQLException {
-        clickedResult.add(ResultChecker.check(new Result(getX(), getY(), getR(), Timestamp.valueOf(LocalDateTime.now()), "0", false)));
+    public void addClick(double x, double y) throws SQLException {
+        setX(x);
+        setY(y);
+        clickedResult.add(ResultChecker.check(new Result(x, y, getR(), Timestamp.valueOf(LocalDateTime.now()), "0", false)));
         saveResult();
 
+    }
+
+    public void UpdateParamsXY(){
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        setX(Double.parseDouble(request.getParameter("clickedX")));
+        setY(Double.parseDouble(request.getParameter("clickedY")));
     }
 
 
@@ -53,6 +68,9 @@ public class ResultsController {
         Result result = new Result(getX(), getY(), getR(), reqTime, "not set", false);
         service.save(ResultChecker.check(result));
     }
+
+
+
 
     public void setReqTime() {
         this.reqTime = new Timestamp(System.currentTimeMillis());
