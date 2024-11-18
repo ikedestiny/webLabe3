@@ -24,11 +24,11 @@
     </navigation-rule>
 
 
-    <managed-bean>
-        <managed-bean-name>results</managed-bean-name>
-        <managed-bean-class>src.main.java.controller.ResultsController</managed-bean-class>
-        <managed-bean-scope>application</managed-bean-scope>
-    </managed-bean>
+<!--    <managed-bean>-->
+<!--        <managed-bean-name>results</managed-bean-name>-->
+<!--        <managed-bean-class>src.main.java.controller.ResultsController</managed-bean-class>-->
+<!--        <managed-bean-scope>application</managed-bean-scope>-->
+<!--    </managed-bean>-->
 
 
 

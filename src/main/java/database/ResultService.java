@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import model.Result;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class ResultService {
+public class ResultService implements Serializable {
 
     DatabaseConnector connector = new DatabaseConnector("postgres","Macdestiny65@","jdbc:postgresql://localhost:5432/weblab3");
 
@@ -67,5 +68,14 @@ public class ResultService {
 
     private Result extract(ResultSet resultSet) throws SQLException {
         return  new Result(resultSet.getDouble("x"), resultSet.getDouble("y"), resultSet.getDouble("r"),resultSet.getTimestamp("received"), resultSet.getString("executionTime"), resultSet.getBoolean("inarea"));
+    }
+
+    public void removeAll() throws SQLException {
+        Connection connection = connector.connect();
+        PreparedStatement statement = connection.prepareStatement(Queries.REMOVE_ALL_RESULTS);
+        statement.executeUpdate();
+        statement.close();
+        connection.commit();
+        connection.close();
     }
 }

@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded",function () {
 
         if (xCoord < 5 && yCoord <5){
             handleClick(xCoord,yCoord)
-        drawCircle(xClick,yClick)}else {alert("not in svg range")}
+        drawCircle(xClick,yClick)
+
+        }
 
 
     }
@@ -33,9 +35,10 @@ document.addEventListener("DOMContentLoaded",function () {
 
 
     function handleClick(x,y){
-        document.getElementById("clickedX").value = x;
-        document.getElementById("clickedY").value = y;
-        document.getElementById("clickForm:submitClick").click()
+        document.getElementById("main-form:currentX").value = x;
+        document.getElementById("main-form:y").value = y;
+        document.getElementById("main-form:submit").click()
+        console.log("click req sent")
 
     }
 

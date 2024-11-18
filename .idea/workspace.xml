@@ -37,11 +37,14 @@
       <change afterPath="$PROJECT_DIR$/../lab3WebNetbeansVersion/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lab3WebNetbeansVersion/src/main/webapp/index.xhtml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lab3WebNetbeansVersion/src/main/webapp/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Shubi.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webLab2.zip" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../wildfly-34.0.0.Final/modules/org/postgresql/main/module.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../wildfly-34.0.0.Final/modules/org/postgresql/main/postgresql-42.7.4.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ResultsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ResultsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/ResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
     </list>
@@ -55,8 +58,8 @@
       <list>
         <option value="CSS File" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -125,6 +128,13 @@
     </key>
   </component>
   <component name="RunManager" selected="JBoss/WildFly Server.WildflyServer">
+    <configuration name="Shubi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Shubi" />
+      <module name="lab3webVersion2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestClass" />
       <module name="lab3webVersion2" />
@@ -295,6 +305,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Shubi" />
       <item itemvalue="Application.TestClass" />
       <item itemvalue="Docker.Unnamed" />
       <item itemvalue="Docker.Dockerfile" />
@@ -303,6 +314,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Shubi" />
         <item itemvalue="Application.TestClass" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
@@ -321,7 +333,8 @@
       <workItem from="1731419649386" duration="19495000" />
       <workItem from="1731483248716" duration="480000" />
       <workItem from="1731483757538" duration="19059000" />
-      <workItem from="1731618651003" duration="44726000" />
+      <workItem from="1731618651003" duration="48262000" />
+      <workItem from="1731899197325" duration="7560000" />
     </task>
     <servers />
   </component>
